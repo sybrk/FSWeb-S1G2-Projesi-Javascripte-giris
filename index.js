@@ -224,10 +224,17 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(string) {
+  let sesli = ["a","A","E", "e", "i", "I", "o", "O", "u", "U"];
+  let counter = 0;
+  for (i = 0; i < string.length; i++) {
+    if (sesli.includes(string[i])) {
+      counter++;
+    }
+  }
+  return counter;
 }
-
+console.log(sesliHarfSayaci("burada Kaç tane sesli Harf var?"));
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
   console.log("Kodlar çalışıyor");
